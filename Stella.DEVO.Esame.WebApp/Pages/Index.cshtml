@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center" style="width:500px;">
+
+    <form method="post">
+
+        <label> Inserisci testo </label>
+        <input type="text" asp-for="Input.Text" />
+        <button class="btn btn-primary" type="submit"> Analizza </button>
+
+    </form>
+
+    <br />
+    <a asp-page="ListData">Visualizza tutte le analisi</a>
+
+</div>

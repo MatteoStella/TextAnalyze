@@ -1,0 +1,25 @@
+﻿@page
+@model Stella.DEVO.Esame.WebApp.Pages.ListDataModel
+@{
+}
+
+<div class="text-center" style="width:500px;">
+
+    @if(Model.ListData != null)
+    {
+        @foreach(var p in Model.ListData)
+        {
+            <h2>Text: @p.Text</h2>
+            <h4>Sentence sentiment: @p.Sentiment</h4>
+            <ul>ConfidenceScores:
+                <li>Positive score: @p.Positive</li>
+                <li>Neutral score: @p.Neutral</li>
+                <li>Negative score: @p.Negative</li>
+            </ul>
+            <hr />
+
+        }
+    }
+
+    <a asp-page="Index">Torna alla Home</a>
+</div>
